@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GatewayChurch.API.Models;
 using System.Net;
 using System.IO;
 using System.Threading;
 using Newtonsoft.Json.Linq;
+using GatewayChurch.API.Models;
 
 namespace GatewayChurch.API.Networking
 {

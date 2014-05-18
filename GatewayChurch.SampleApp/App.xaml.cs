@@ -6,9 +6,9 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using GatewayChurch.API.Tests.Resources;
+using GatewayChurch.SampleApp.Resources;
 
-namespace GatewayChurch.API.Tests
+namespace GatewayChurch.SampleApp
 {
     public partial class App : Application
     {
@@ -129,7 +129,7 @@ namespace GatewayChurch.API.Tests
             // Handle reset requests for clearing the backstack
             RootFrame.Navigated += CheckForResetNavigation;
 
-            //Attach the ContractActivated event handler
+            // Handle contract activation such as a file open or save picker
             PhoneApplicationService.Current.ContractActivated += Application_ContractActivated;
 
             // Ensure we don't initialize again

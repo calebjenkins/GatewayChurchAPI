@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{36dd7f9f-bec4-41a0-aa82-31d4e533c1b5}" Title="GatewayChurch.API.Tests" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="GatewayChurch.API.Tests author" Description="Sample description" SDOptOut ="false" BackUpOptOut ="false" Publisher="GatewayChurch.API.Tests" PublisherID="{1d86fac3-1f5a-4a19-bf13-81433caff55e}">
+  <App xmlns="" ProductID="{a4900313-7987-4d60-b780-8b813f8190fb}" Title="GatewayChurch.SampleApp" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="GatewayChurch.SampleApp author" Description="Sample description" SDOptOut ="false" BackUpOptOut ="false" Publisher="GatewayChurch.SampleApp" PublisherID="{7d5445fe-0817-4062-9962-a4bf9de58ada}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
@@ -15,12 +15,12 @@
       <DefaultTask Name ="_default" NavigationPage="MainPage.xaml" ActivationPolicy="Resume"/>
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="GatewayChurch.API.TestsToken" TaskName="_default">
+      <PrimaryToken TokenID="GatewayChurch.SampleAppToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>GatewayChurch.API.Tests</Title>
+          <Title>GatewayChurch.SampleApp</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
@@ -29,14 +29,6 @@
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
-    <ActivatableClasses>
-      <InProcessServer>
-        <Path>vstest_executionengine_platformbridge.dll</Path>
-        <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.ServiceMain" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.MessageTransmitter" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.NativeMethods" ThreadingModel="both" />
-      </InProcessServer>
-    </ActivatableClasses>
     <ScreenResolutions>
       <ScreenResolution Name="ID_RESOLUTION_WVGA"/>
       <ScreenResolution Name="ID_RESOLUTION_WXGA"/>

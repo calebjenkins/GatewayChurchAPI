@@ -6,11 +6,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GatewayChurch.API")]
+[assembly: AssemblyTitle("GatewayChurch.SampleApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GatewayChurch.API")]
+[assembly: AssemblyProduct("GatewayChurch.SampleApp")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9b872d76-b9b2-49fb-9a3a-92fa84d827b4")]
+[assembly: Guid("d3c151da-460b-4ce0-8d8a-e6f52e5b6c24")]
 
 // Version information for an assembly consists of the following four values:
 //

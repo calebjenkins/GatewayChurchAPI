@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using System.Collections.Generic;
-using GatewayChurch.API.Models;
 using System.Threading;
+using System.Collections.Generic;
 using GatewayChurch.API.Networking;
+using GatewayChurch.API.Models;
 
 namespace GatewayChurch.API.Tests
 {
@@ -20,12 +20,12 @@ namespace GatewayChurch.API.Tests
             ICollection<string> tYears = new List<string>();
 
             sut.GetYears((results, ex) =>
-                {
-                    tEX = ex;
-                    tYears = results;
+            {
+                tEX = ex;
+                tYears = results;
 
-                    reset.Set();
-                });
+                reset.Set();
+            });
 
             reset.WaitOne();
 
@@ -86,19 +86,19 @@ namespace GatewayChurch.API.Tests
 
             IGatewayService sut = new GatewayService();
             sut.GetSeries((Series, ex) =>
+            {
+                foreach (var s in Series)
                 {
-                    foreach (var s in Series)
-                    {
-                        SeriesId = s.Id;
-                        break;
-                    }
-                    sut.GetSermonBySeries(SeriesId, (results, ex2) =>
-                    {
-                        _ex = ex2;
-                        _results = results;
-                        done.Set();
-                    });
+                    SeriesId = s.Id;
+                    break;
+                }
+                sut.GetSermonBySeries(SeriesId, (results, ex2) =>
+                {
+                    _ex = ex2;
+                    _results = results;
+                    done.Set();
                 });
+            });
 
             done.WaitOne();
 
